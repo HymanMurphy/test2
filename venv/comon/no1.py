@@ -1,16 +1,12 @@
-class student(object):
-    def __init__(self, name):
-        self.name = name
-    def __call__(self):
-        print("may")
-        print(self.name)
-    def __len__(self):
-        return len(self.name)
-p = student("hiououou")
-p()
-print(len(p))
+import cv2
+import numpy as np
+import matplotlib.pyplot as plt
 
-class Test():
-    def __len__(self):
-        return 0
-    print(bool(Test()))
+img = cv2.imread('/home/hyman/PycharmProjects/test2/venv/comon/wo.jpg', cv2.IMREAD_GRAYSCALE)
+
+# cv2.imshow('image', img)
+# cv2.waitKey(0)
+# cv2.destroyAllWindows()
+plt.imshow(img, cmap='gray',interpolation='bicubic')
+plt.plot([50,100],[80,100])
+plt.show()
